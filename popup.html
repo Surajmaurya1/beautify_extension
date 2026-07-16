@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Beautify</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="wrap">
+    <div class="brand">
+      <span class="logo">✨</span>
+      <h1>Beautify</h1>
+    </div>
+    <p class="site" id="site">—</p>
+
+    <div class="row">
+      <span class="row-label" id="toggleLabel">Off</span>
+      <label class="switch">
+        <input type="checkbox" id="toggle" />
+        <span class="slider"></span>
+      </label>
+    </div>
+
+    <div class="field">
+      <label for="theme">Theme</label>
+      <select id="theme">
+        <option value="modern-light">Modern Light</option>
+        <option value="modern-dark">Modern Dark</option>
+        <option value="high-contrast">High Contrast (Accessible)</option>
+        <option value="ai-custom">✨ AI Custom Design (Gemini)</option>
+      </select>
+    </div>
+
+    <button id="regenBtn" class="regen-btn" style="display:none">
+      🔄 Regenerate AI Design
+    </button>
+
+    <details class="apikey">
+      <summary>⚙ Gemini API Key</summary>
+      <p class="hint" style="margin-top:8px">
+        Needed only for "AI Custom Design". Get a free key at
+        <a href="https://aistudio.google.com/apikey" target="_blank" rel="noopener">aistudio.google.com/apikey</a>.
+        Stored locally in your browser only.
+      </p>
+      <input type="password" id="apiKey" placeholder="AIza..." />
+      <button id="saveKey">Save Key</button>
+      <span id="keyStatus" class="key-status"></span>
+    </details>
+
+    <p class="hint">
+      Restyles this site with clean typography, spacing, colors and shadows.
+      Layout structure, links, forms, and buttons keep working exactly the same —
+      only the look changes. AI Custom Design sends this page's HTML structure
+      (ids/classes) and CSS to Gemini to generate a one-off redesign.
+    </p>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

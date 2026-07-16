@@ -1,0 +1,60 @@
+/* Beautify extension - floating action button (always loaded, tiny footprint) */
+
+#__beautify_ext_fab {
+  all: initial !important;
+  position: fixed !important;
+  bottom: 24px !important;
+  right: 24px !important;
+  z-index: 2147483647 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  padding: 12px 20px !important;
+  border: none !important;
+  border-radius: 999px !important;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6) !important;
+  color: #ffffff !important;
+  font-family: 'Segoe UI', Arial, Helvetica, sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  box-shadow: 0 8px 24px rgba(99, 102, 241, 0.45) !important;
+  cursor: pointer !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+  line-height: 1.2 !important;
+  letter-spacing: 0.01em !important;
+  user-select: none !important;
+}
+
+#__beautify_ext_fab:hover {
+  transform: translateY(-3px) scale(1.03) !important;
+  box-shadow: 0 12px 30px rgba(99, 102, 241, 0.6) !important;
+}
+
+#__beautify_ext_fab:active {
+  transform: translateY(-1px) scale(0.98) !important;
+}
+
+#__beautify_ext_fab[data-active="true"] {
+  background: linear-gradient(135deg, #475569, #1e293b) !important;
+  box-shadow: 0 8px 24px rgba(30, 41, 59, 0.45) !important;
+}
+
+#__beautify_ext_fab[data-loading="true"] {
+  cursor: wait !important;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6) !important;
+  animation: __bf_pulse 1.1s ease-in-out infinite !important;
+}
+
+@keyframes __bf_pulse {
+  0%, 100% { opacity: 0.72; }
+  50% { opacity: 1; }
+}
+
+@media (max-width: 480px) {
+  #__beautify_ext_fab {
+    bottom: 16px !important;
+    right: 16px !important;
+    padding: 10px 16px !important;
+    font-size: 13px !important;
+  }
+}

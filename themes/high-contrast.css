@@ -1,0 +1,133 @@
+/* ==========================================================================
+   Beautify - High Contrast (Accessible) theme
+   Large text, strong contrast ratios (WCAG-AA+), clear focus states.
+   Scoped under html.__beautified_by_ext - no ids/classes/markup touched.
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+html.__beautified_by_ext {
+  --bf-font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --bf-bg: #ffffff;
+  --bf-surface: #ffffff;
+  --bf-text: #000000;
+  --bf-text-muted: #333333;
+  --bf-primary: #0b3d91;
+  --bf-primary-hover: #062a66;
+  --bf-primary-soft: #dbe7ff;
+  --bf-border: #000000;
+  --bf-radius: 6px;
+  --bf-radius-sm: 4px;
+  --bf-shadow: none;
+}
+
+html.__beautified_by_ext body {
+  background: var(--bf-bg) !important;
+  color: var(--bf-text) !important;
+  font-family: var(--bf-font) !important;
+  line-height: 1.7 !important;
+  font-size: 18px !important;
+}
+
+html.__beautified_by_ext h1, html.__beautified_by_ext h2, html.__beautified_by_ext h3,
+html.__beautified_by_ext h4, html.__beautified_by_ext h5, html.__beautified_by_ext h6 {
+  font-family: var(--bf-font) !important;
+  color: #000000 !important;
+  font-weight: 800 !important;
+  margin: 0.8em 0 0.5em !important;
+}
+html.__beautified_by_ext h1 { font-size: 2.1rem !important; }
+html.__beautified_by_ext h2 { font-size: 1.7rem !important; }
+html.__beautified_by_ext h3 { font-size: 1.4rem !important; }
+
+html.__beautified_by_ext a {
+  color: var(--bf-primary) !important;
+  text-decoration: underline !important;
+  font-weight: 600 !important;
+}
+html.__beautified_by_ext a:hover,
+html.__beautified_by_ext a:focus {
+  color: var(--bf-primary-hover) !important;
+  background: #fff3b0 !important;
+}
+html.__beautified_by_ext *:focus {
+  outline: 3px solid #ff9900 !important;
+  outline-offset: 2px !important;
+}
+
+html.__beautified_by_ext button,
+html.__beautified_by_ext input[type='button'],
+html.__beautified_by_ext input[type='submit'],
+html.__beautified_by_ext input[type='reset'] {
+  font-family: var(--bf-font) !important;
+  background: var(--bf-primary) !important;
+  color: #ffffff !important;
+  border: 2px solid #000000 !important;
+  padding: 12px 20px !important;
+  border-radius: var(--bf-radius-sm) !important;
+  font-weight: 700 !important;
+  font-size: 16px !important;
+  cursor: pointer !important;
+}
+html.__beautified_by_ext button:hover,
+html.__beautified_by_ext input[type='submit']:hover {
+  background: var(--bf-primary-hover) !important;
+}
+
+html.__beautified_by_ext input:not([type='button']):not([type='submit']):not([type='reset']):not([type='checkbox']):not([type='radio']),
+html.__beautified_by_ext select,
+html.__beautified_by_ext textarea {
+  font-family: var(--bf-font) !important;
+  background: #ffffff !important;
+  color: #000000 !important;
+  border: 2px solid #000000 !important;
+  border-radius: var(--bf-radius-sm) !important;
+  padding: 10px 12px !important;
+  font-size: 16px !important;
+}
+
+html.__beautified_by_ext table {
+  border-collapse: collapse !important;
+  width: 100% !important;
+  background: #ffffff !important;
+  font-size: 16px !important;
+}
+html.__beautified_by_ext table, html.__beautified_by_ext th, html.__beautified_by_ext td {
+  border: 2px solid #000000 !important;
+}
+html.__beautified_by_ext th {
+  background: var(--bf-primary) !important;
+  color: #ffffff !important;
+  font-weight: 800 !important;
+  text-align: left !important;
+  padding: 12px 14px !important;
+}
+html.__beautified_by_ext td {
+  padding: 12px 14px !important;
+  color: #000000 !important;
+  background: #ffffff !important;
+}
+html.__beautified_by_ext tr:nth-child(even) td {
+  background: #f0f0f0 !important;
+}
+
+html.__beautified_by_ext nav, html.__beautified_by_ext header {
+  background: #ffffff !important;
+  border-bottom: 2px solid #000000 !important;
+}
+html.__beautified_by_ext footer {
+  background: #ffffff !important;
+  color: #000000 !important;
+  border-top: 2px solid #000000 !important;
+  padding: 20px !important;
+}
+
+html.__beautified_by_ext img, html.__beautified_by_ext video, html.__beautified_by_ext iframe {
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+html.__beautified_by_ext ::selection {
+  background: #ff9900 !important;
+  color: #000000 !important;
+}
